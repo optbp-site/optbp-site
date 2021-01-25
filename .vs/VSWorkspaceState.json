@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\assets\\css",
+    "\\assets\\fonts",
+    "\\assets\\images",
     "\\assets\\js"
   ],
-  "SelectedNode": "\\assets\\js\\main.js",
+  "SelectedNode": "\\assets\\images\\footer-bg.svg",
   "PreviewInSolutionExplorer": false
 }
