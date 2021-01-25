@@ -99,9 +99,9 @@ h6 {
   font-size: 16px; }
 
 ul, ol {
-  margin: 0px;
+  margin: 10px;
   padding: 0px;
-  list-style-type: none; }
+  list-style-type: normal; }
 
 p {
   font-size: 16px;
@@ -774,15 +774,15 @@ p {
     .header-hero-content {
       padding-top: 100px; } }
   .header-hero-content .header-sub-title {
-    font-size: 38px;
+    font-size: 22px;
     font-weight: 300;
     color: #fff; }
     @media (max-width: 767px) {
       .header-hero-content .header-sub-title {
-        font-size: 24px; } }
+        font-size: 22px; } }
     @media only screen and (min-width: 576px) and (max-width: 767px) {
       .header-hero-content .header-sub-title {
-        font-size: 30px; } }
+        font-size: 22px; } }
   .header-hero-content .header-title {
     font-size: 38px;
     font-weight: 700;
@@ -984,6 +984,22 @@ p {
     margin-top: 40px; }
     .about-content .main-btn:hover {
       background-position: right center; }
+    .about-content .header-sub-title {
+            font-size: 22px;
+            font-weight: 300;
+            color: #000;
+        }
+        @media (max-width: 767px) {
+            .about-content .header-sub-title {
+                font-size: 22px;
+            }
+        }
+
+        @media only screen and (min-width: 576px) and (max-width: 767px) {
+            .about-content .header-sub-title {
+                font-size: 22px;
+            }
+        }
 
 /*===========================
     06.VIDEO COUNTER css 
