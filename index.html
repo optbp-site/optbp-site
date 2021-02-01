@@ -129,7 +129,7 @@
     </header>
 
     <!--====== HEADER PART ENDS ======-->
-    <!--====== BRAMD PART START ======-->
+    <!--====== BRAMD PART START ======
 
     <div class="brand-area pt-90">
         <div class="container">
@@ -138,26 +138,26 @@
                     <div class="brand-logo d-flex align-items-center justify-content-center justify-content-md-between">
                         <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <img src="assets/images/brand-1.png" alt="brand">
-                        </div> <!-- single logo -->
+                        </div>
                         <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                             <img src="assets/images/brand-2.png" alt="brand">
-                        </div> <!-- single logo -->
+                        </div>
                         <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
                             <img src="assets/images/brand-3.png" alt="brand">
-                        </div> <!-- single logo -->
+                        </div>
                         <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.4s">
                             <img src="assets/images/brand-4.png" alt="brand">
-                        </div> <!-- single logo -->
+                        </div>
                         <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
                             <img src="assets/images/brand-5.png" alt="brand">
-                        </div> <!-- single logo -->
-                    </div> <!-- brand logo -->
+                        </div>
+                    </div>
                 </div>
-            </div>   <!-- row -->
-        </div> <!-- container -->
+            </div>
+        </div> 
     </div>
 
-    <!--====== BRAMD PART ENDS ======-->
+    ====== BRAND PART ENDS ======-->
     <!--====== SERVICES PART START ======-->
 
     <section id="features" class="services-area pt-120">
@@ -179,7 +179,7 @@
                             <i class="lni lni-baloon"></i>
                         </div>
                         <div class="services-content mt-30">
-                            <h4 class="services-title"><a class="page-scroll" href="#about">Clean</aclass="page-scroll"></h4>
+                            <h4 class="services-title"><a class="page-scroll" href="#about">Clean</a></h4>
                             <p class="text">Hypertension Management without face to face Clinic visits.</p>
                             <a class="page-scroll more" href="#about">Learn More <i class="lni lni-chevron-right"></i></a>
                         </div>
@@ -389,7 +389,7 @@
                 <div class="col-lg-10">
                     <div class="section-title text-center pb-40">
                         <div class="line m-auto"></div>
-                        <h3 class="title">The Team</span></h3>
+                        <h3 class="title">The Team</h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -448,18 +448,52 @@
             <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="subscribe-content mt-45">
-                            <h2 class="subscribe-title">Subscribe Our Newsletter <span>get reguler updates</span></h2>
-                        </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="subscribe-form mt-50">
-                            <form action="#">
-                                <input type="text" placeholder="Enter eamil">
-                                <button class="main-btn">Subscribe</button>
+
+
+                        <div class="subscribe-area form-style-one mt-35 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                            <form  id="contact-form" action="https://mailthis.to/OptBP21" method="post">
+                                <div class="form-input mt-15">
+                                    <label>Name</label>
+                                    <div class="input-items default">
+                                        <input type="text" placeholder="Name" name="name">
+                                    </div>
+                                </div>
+                                <div class="form-input mt-15">
+                                    <label>Email</label>
+                                    <div class="input-items default">
+                                        <input type="email" placeholder="Email" name="email">
+                                    </div>
+                                </div>
+                                <div class="form-input mt-15">
+                                    <label>Message</label>
+                                    <div class="input-items default">
+                                        <textarea placeholder="Message" name="message"></textarea>
+                                    </div>
+                                </div>
+                                <p class="form-message"></p>
+                                <div class="form-input rounded-buttons mt-20">
+				      <!-- Custom email Subject -->
+				      <input type="hidden" name="_subject" value="Enquiry from Website">
+				      <!-- Redirect to a page after recaptcha 
+				      <input type="hidden" name="_after" value="https://palma-mallorca.github.io/">
+                        -->
+                                    <!-- Honeypot (to catch comment spam bots) -->
+				      <input type="hidden" name="_honeypot" value="">
+				      <!-- Apply a custom confirmation message on the second step -->
+				      <input type="hidden" name="_confirmation" value="Thank you for your enquiry.">
+
+                                    <button type="submit" class="main-btn rounded-three">Submit</button>
+                                </div> <!-- form input -->
                             </form>
-                        </div>
+                        </div> <!-- contact form -->
                     </div>
+
+
+
+
+
                 </div> <!-- row -->
             </div> <!-- subscribe area -->
             <div class="footer-widget pb-100">
@@ -469,7 +503,7 @@
                             <a class="logo" href="#">
                                 <img src="assets/images/logo.svg" alt="logo">
                             </a>
-                            <p class="text">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                            <br /><br /><br /><br /><br /><br />
                             <ul class="social">
                                 <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
                                 <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
@@ -483,21 +517,27 @@
                             <div class="footer-title">
                                 <h4 class="title">Contact Us</h4>
                             </div>
-                            <ul class="contact">
-                                <li><a href="mailto:support@optbp.com">support@optbp.com</a></li>
-                                <li><a href="https://optbp.freshdesk.com">https://optbp.freshdesk.com</a></li>
-                                <li>Optimise Health Ltd, Aura-Soma, South Road, Tetford, Lincolnshire, LN9 6QB</li>
-                            </ul>
+                            <p class="text"><a href="mailto:support@optbp.com">support@optbp.com</a></p>
+                            <p class="text"><a href="https://optbp.freshdesk.com">https://optbp.freshdesk.com</a></p>
+                            <p class="text">Optimise Health Ltd, <br />Aura-Soma,<br /> South Road,<br /> Tetford,<br /> Lincolnshire,<br /> LN9 6QB</p>
                         </div> <!-- footer contact -->
                     </div>
                 </div> <!-- row -->
             </div> <!-- footer widget -->
             <div class="footer-copyright">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="copyright d-sm-flex justify-content-between">
                             <div class="copyright-content">
                                 <p class="text">Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                            </div> <!-- copyright content -->
+                        </div> <!-- copyright -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="copyright d-sm-flex justify-content-between">
+                            <div class="copyright-content">
+                                <span class="text"><a href="Privacy.html" rel="nofollow">Privacy Policy</a></span>    
+                                <span class="text"><a href="Terms.html" rel="nofollow">Terms & Conditions</a></span>
                             </div> <!-- copyright content -->
                         </div> <!-- copyright -->
                     </div>

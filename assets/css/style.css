@@ -1305,6 +1305,12 @@ p {
     font-size: 16px;
     color: #fff; }
 
+.footer-contact .text {
+    color: #fff;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
 .footer-copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 15px;
