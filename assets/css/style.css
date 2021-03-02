@@ -1475,3 +1475,5 @@ p {
     z-index: 9;
     color: #6c6c6c; }
 
+ol.c {list-style-type: upper-roman;}
+ol.d {list-style-type: lower-alpha;}
