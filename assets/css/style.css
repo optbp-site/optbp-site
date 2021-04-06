@@ -1001,138 +1001,6 @@ p {
             }
         }
 
-/*===========================
-    06.VIDEO COUNTER css 
-===========================*/
-.video-content {
-  position: relative;
-  padding-bottom: 30px; }
-  .video-content .dots {
-    position: absolute;
-    left: -30px;
-    bottom: 0; }
-
-.video-wrapper {
-  margin-right: 15px;
-  position: relative;
-  -webkit-box-shadow: 0px 13px 46px 0px rgba(113, 113, 113, 0.33);
-  -moz-box-shadow: 0px 13px 46px 0px rgba(113, 113, 113, 0.33);
-  box-shadow: 0px 13px 46px 0px rgba(113, 113, 113, 0.33);
-  border-radius: 10px;
-  overflow: hidden; }
-  @media (max-width: 767px) {
-    .video-wrapper {
-      margin-right: 0; } }
-  .video-wrapper .video-image img {
-    width: 100%; }
-  .video-wrapper .video-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: -webkit-linear-gradient(left, rgba(54, 28, 193, 0.2) 0%, rgba(46, 130, 239, 0.2) 100%);
-    background: -o-linear-gradient(left, rgba(54, 28, 193, 0.2) 0%, rgba(46, 130, 239, 0.2) 100%);
-    background: linear-gradient(to right, rgba(54, 28, 193, 0.2) 0%, rgba(46, 130, 239, 0.2) 100%); }
-    .video-wrapper .video-icon a {
-      width: 55px;
-      height: 55px;
-      line-height: 55px;
-      text-align: center;
-      border-radius: 50%;
-      background-color: #fff;
-      color: #FE8464;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-
-.counter-wrapper {
-  padding-left: 70px; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .counter-wrapper {
-      padding-left: 0; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .counter-wrapper {
-      padding-left: 0; } }
-  @media (max-width: 767px) {
-    .counter-wrapper {
-      padding-left: 0; } }
-  .counter-wrapper .counter-content .text {
-    margin-top: 35px; }
-  .counter-wrapper .single-counter {
-    max-width: 155px;
-    height: 120px;
-    border-radius: 60px;
-    position: relative;
-    z-index: 5;
-    margin-top: 60px; }
-    @media (max-width: 767px) {
-      .counter-wrapper .single-counter {
-        max-width: 100px;
-        height: 80px; } }
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      .counter-wrapper .single-counter {
-        max-width: 155px;
-        height: 120px; } }
-    .counter-wrapper .single-counter::before {
-      position: absolute;
-      content: '';
-      width: 155px;
-      height: 120px;
-      border-radius: 60px;
-      top: 0;
-      left: 0;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      z-index: -1; }
-      @media (max-width: 767px) {
-        .counter-wrapper .single-counter::before {
-          max-width: 100px;
-          height: 80px; } }
-      @media only screen and (min-width: 576px) and (max-width: 767px) {
-        .counter-wrapper .single-counter::before {
-          max-width: 155px;
-          height: 120px; } }
-    .counter-wrapper .single-counter.counter-color-1::before {
-      background: -webkit-linear-gradient(#33c8c1 0%, #119bd2 100%);
-      background: -o-linear-gradient(#33c8c1 0%, #119bd2 100%);
-      background: linear-gradient(#33c8c1 0%, #119bd2 100%); }
-    .counter-wrapper .single-counter.counter-color-2::before {
-      background: -webkit-linear-gradient(#fe8464 0%, #fe6e9a 100%);
-      background: -o-linear-gradient(#fe8464 0%, #fe6e9a 100%);
-      background: linear-gradient(#fe8464 0%, #fe6e9a 100%); }
-    .counter-wrapper .single-counter.counter-color-3::before {
-      background: -webkit-linear-gradient(#361cc1 0%, #2e82ef 100%);
-      background: -o-linear-gradient(#361cc1 0%, #2e82ef 100%);
-      background: linear-gradient(#361cc1 0%, #2e82ef 100%); }
-    .counter-wrapper .single-counter .count {
-      font-size: 22px;
-      font-weight: 700;
-      color: #fff; }
-      @media (max-width: 767px) {
-        .counter-wrapper .single-counter .count {
-          font-size: 18px; } }
-      @media only screen and (min-width: 576px) and (max-width: 767px) {
-        .counter-wrapper .single-counter .count {
-          font-size: 22px; } }
-    .counter-wrapper .single-counter .text {
-      font-size: 16px;
-      color: #fff; }
-      @media (max-width: 767px) {
-        .counter-wrapper .single-counter .text {
-          font-size: 14px; } }
-      @media only screen and (min-width: 576px) and (max-width: 767px) {
-        .counter-wrapper .single-counter .text {
-          font-size: 16px; } }
-
 
 /*===========================
        10.SUBSCRIBE  css 
@@ -1477,3 +1345,131 @@ p {
 
 ol.c {list-style-type: upper-roman;}
 ol.d {list-style-type: lower-alpha;}
+
+
+/*===========================
+       FB.ANIMATE  css 
+===========================*/
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.fadeInRightBig {
+    -webkit-animation-name: fadeInRightBig;
+    animation-name: fadeInRightBig;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+/*===========================
+       FB.LINEICONS  css 
+===========================*/
+
+.lni {
+    display: inline-block;
+    font: normal normal normal 1em/1 'LineIcons';
+    speak: none;
+    text-transform: none;
+    /* Better Font Rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.lni-baloon::before {
+    content: "\ea2b";
+}
+
+.lni-bolt-alt::before {
+    content: "\ea35";
+}
+
+.lni-chevron-right::before {
+    content: "\ea5c";
+}
+
+.lni-cog::before {
+    content: "\ea6f";
+}
+
+.lni-envelope::before {
+    content: "\eaab";
+}
+
+.lni-facebook-filled::before {
+    content: "\eab2";
+}
+
+.lni-instagram-filled::before {
+    content: "\eaf1";
+}
+
+.lni-linkedin-original::before {
+    content: "\eb14";
+}
+
+.lni-pencil-alt::before {
+    content: "\eb48";
+}
+
+.lni-twitter-filled::before {
+    content: "\ebd6";
+}
+
+.lni-user::before {
+    content: "\ebde";
+}
+
+
+/*===========================
+       FB.DEFAULT  css 
+===========================*/
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-35 {
+    margin-top: 35px;
+}
+
+.mt-45 {
+    margin-top: 45px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.pt-70 {
+    padding-top: 70px;
+}
+
+.pt-120 {
+    padding-top: 120px;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
