@@ -1,0 +1,82 @@
+<body onload="init()">
+
+    <input type="file" onclick="init()" onchange="previewFile()" />
+    <br />
+    <img id="thisimage" src="" height="200" alt="No image loaded!" />
+    <br />
+    <table id="ViewBPResult"></table>
+
+
+</body>
+
+<script>
+
+    function init()
+    {
+        setImageVisible("thisimage", false)
+        document.getElementById("ViewBPResult").innerHTML = "";
+    }
+
+    function setImageVisible(id, visible) {
+        var img = document.getElementById(id);
+        img.style.visibility = (visible ? 'visible' : 'hidden');
+    }
+
+    function previewFile() {
+        const preview = document.querySelector('img');
+        const file = document.querySelector('input[type=file]').files[0];
+        const reader = new FileReader();
+
+        reader.addEventListener("load", () => {
+            // convert image file to base64 string
+            preview.src = reader.result;
+            setImageVisible("thisimage", true)
+            var base64result = reader.result.split(',')[1];
+            //console.log('RESULT:', base64result)
+            const BPReading = postThisData(base64result);
+        }, false);
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+
+    async function postThisData(DataBlob) {
+
+        const BPData = new URLSearchParams();
+        BPData.append("UserID", 1);
+        BPData.append("filename", "photo.jpg");
+        BPData.append("filedata", DataBlob);
+
+        postData('http://20.50.126.220:8000/upload', BPData)
+            .then((BPReadingResult) => {
+                //console.log(BPReadingResult); // JSON data parsed by `data.json()` call
+                //console.log('BPReading UID:', BPReadingResult.UserID);
+                //console.log('BPReading SYS:', BPReadingResult.SYS);
+                //console.log('BPReading DIA:', BPReadingResult.DIA);
+                //console.log('BPReading HR:', BPReadingResult.HR);
+                let tab =
+                    `<tr>
+                              <th>Systolic</th>
+                              <th>Diastolic</th>
+                              <th>Heart Rate</th>
+                              <th>Image</th>
+                             </tr>`;
+                tab += `<tr>
+                                <td>${BPReadingResult.SYS} </td>
+                                <td>${BPReadingResult.DIA}</td>
+                                <td>${BPReadingResult.HR}</td>
+                                <td>${BPReadingResult.Image}</td>
+                            </tr>`;
+                document.getElementById("ViewBPResult").innerHTML = tab;
+            });
+    }
+
+    async function postData(url = '', data = {}) {
+        let response = await fetch(url, { method: 'POST', mode: 'cors', body: data });
+        let returndata = await response;
+        //console.log(returndata.toString());
+        return response.json();
+    }
+
+</script>
