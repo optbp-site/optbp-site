@@ -1,36 +1,68 @@
+<head>
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
 <body onload="init()">
 
-    <input type="file" onclick="init()" onchange="previewFile()" />
-    <br />
-    <img id="thisimage" src="" height="200" alt="No image loaded!" />
-    <br />
-    <table id="ViewBPResult"></table>
-
-
+    <center>
+        <!--        <img id="logo" src="LogoH.svg" height="40" alt="Logo">-->
+        <img src="assets/images/LogoH.svg" height="40" alt="Logo">
+        <br />
+        <br />
+        <h3>Please help teach our AI Blood Pressure Reader!</h3>
+        <br />
+        <input type="file" onclick="init()" onchange="previewFile()" />
+        <br />
+        <br />
+        <img id="thisimage" src="" height="200" alt="No image loaded!" />
+        <br />
+        <br />
+        <table id="ViewBPResult"></table>
+        <div id="loading"> Loading... </div>
+        <br />
+        <div id="feedback">
+            Was the result accurate?
+            <input type="button" onclick="ResultCollection(1)" value="Yes" />
+            <input type="button" onclick="ResultCollection(0)" value="No" />
+        </div>
+        <div id="thanks">
+            Thank you :)
+        </div>
+    </center>
 </body>
 
 <script>
 
+    var imageID = "";
+    var URLRoot = 'https://ocr.optbp.com/'
+
     function init()
     {
-        setImageVisible("thisimage", false)
+        setObjVisible("thisimage", false)
+        setObjVisible("feedback", false)
+        setObjVisible("loading", false)
+        setObjVisible("thanks", false)
         document.getElementById("ViewBPResult").innerHTML = "";
     }
 
-    function setImageVisible(id, visible) {
-        var img = document.getElementById(id);
-        img.style.visibility = (visible ? 'visible' : 'hidden');
+    function setObjVisible(id, visible) {
+        var Obj = document.getElementById(id);
+        Obj.style.visibility = (visible ? 'visible' : 'hidden');
     }
 
     function previewFile() {
-        const preview = document.querySelector('img');
+        const preview = document.getElementById("thisimage");
         const file = document.querySelector('input[type=file]').files[0];
         const reader = new FileReader();
 
         reader.addEventListener("load", () => {
             // convert image file to base64 string
             preview.src = reader.result;
-            setImageVisible("thisimage", true)
+            setObjVisible("thisimage", true)
+            setObjVisible("loading", true)
             var base64result = reader.result.split(',')[1];
             //console.log('RESULT:', base64result)
             const BPReading = postThisData(base64result);
@@ -48,7 +80,7 @@
         BPData.append("filename", "photo.jpg");
         BPData.append("filedata", DataBlob);
 
-        postData('https://ocr.optbp.com/upload', BPData)
+        postData('upload', BPData)
             .then((BPReadingResult) => {
                 //console.log(BPReadingResult); // JSON data parsed by `data.json()` call
                 //console.log('BPReading UID:', BPReadingResult.UserID);
@@ -60,20 +92,34 @@
                               <th>Systolic</th>
                               <th>Diastolic</th>
                               <th>Heart Rate</th>
-                              <th>Image</th>
                              </tr>`;
                 tab += `<tr>
                                 <td>${BPReadingResult.SYS} </td>
                                 <td>${BPReadingResult.DIA}</td>
                                 <td>${BPReadingResult.HR}</td>
-                                <td>${BPReadingResult.Image}</td>
                             </tr>`;
                 document.getElementById("ViewBPResult").innerHTML = tab;
+                setObjVisible("feedback", true)
+                setObjVisible("loading", false)
+                imageID = BPReadingResult.Image;
             });
     }
 
     async function postData(url = '', data = {}) {
-        let response = await fetch(url, { method: 'POST', mode: 'cors', body: data });
+        let response = await fetch(URLRoot + url, { method: 'POST', mode: 'cors', body: data });
+        let returndata = await response;
+        //console.log(returndata.toString());
+        return response.json();
+    }
+
+    async function ResultCollection(SuccessStatus) {
+        setObjVisible("feedback", false)
+        setObjVisible("thanks", true)
+        const data = new URLSearchParams();
+        //console.log("imageID=" + imageID);
+        data.append("ImageID", imageID);
+        data.append("ImageSuccess", SuccessStatus);
+        let response = await fetch(URLRoot + "update", { method: 'POST', mode: 'cors', body: data });
         let returndata = await response;
         //console.log(returndata.toString());
         return response.json();
