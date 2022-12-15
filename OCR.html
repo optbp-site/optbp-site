@@ -48,7 +48,7 @@
         BPData.append("filename", "photo.jpg");
         BPData.append("filedata", DataBlob);
 
-        postData('http://20.50.126.220:8000/upload', BPData)
+        postData('https://ocr.optbp.com/upload', BPData)
             .then((BPReadingResult) => {
                 //console.log(BPReadingResult); // JSON data parsed by `data.json()` call
                 //console.log('BPReading UID:', BPReadingResult.UserID);
