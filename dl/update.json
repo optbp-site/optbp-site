@@ -1,20 +1,27 @@
 [
   {
-    "version": "v4.3.3",
+    "version": "4.3.4",
+    "file": "OptimiseBP-4.3.4.exe",
+    "date": "2024-04-29",
+    "desc": "Minor release - Enhancement",
+    "MD5": "32388fb665af81984a6c7cd6bc080d26"
+  },
+  {
+    "version": "4.3.3",
     "file": "OptimiseBP-4.3.3.exe",
     "date": "2024-03-25",
     "desc": "Minor release - Enhancement",
     "MD5": "867a26359531a33fe9f610ff2fe60207"
   },
   {
-    "version": "v4.3.2",
+    "version": "4.3.2",
     "file": "OptimiseBP-4.3.2.exe",
     "date": "2023-11-25",
     "desc": "Minor release - Bug fix",
     "MD5": "89ca9b29e77e1cdf70cb6d9802cf2f91"
   },
   {
-    "version": "v4.3.1",
+    "version": "4.3.1",
     "file": "OptimiseBP-4.3.1.exe",
     "date": "2023-11-21",
     "desc": "Minor release - Feature",
