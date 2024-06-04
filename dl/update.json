@@ -1,5 +1,19 @@
 [
   {
+    "version": "4.4.3",
+    "file": "OptimiseBP-4.4.3.exe",
+    "date": "2024-06-04",
+    "desc": "Minor release - Autoupdater Test",
+    "MD5": "ce8b684ad628a6b26c464403f181b9f4"
+  },
+  {
+    "version": "4.4.2",
+    "file": "OptimiseBP-4.4.2.exe",
+    "date": "2024-06-04",
+    "desc": "Minor release - Autoupdater Test",
+    "MD5": "4c8e642b5d629ea8718f488280736fee"
+  },
+  {
     "version": "4.4.0",
     "file": "OptimiseBP-4.4.0.exe",
     "date": "2024-06-03",
