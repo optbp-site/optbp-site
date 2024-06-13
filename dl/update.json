@@ -1,9 +1,16 @@
 [
   {
+    "version": "4.4.5",
+    "file": "OptimiseBP-4.4.5.exe",
+    "date": "2024-06-13",
+    "desc": "Minor release - Update to allow Beta Testing & Live Separation",
+    "MD5": "badac01065be5906d7c57332e6c559c8"
+  },
+  {
     "version": "4.4.4",
     "file": "OptimiseBP-4.4.4.exe",
     "date": "2024-06-05",
-    "desc": "Minor release - Skip Audit",
+    "desc": "Minor release - Skip Audit (Optional)",
     "MD5": "eb359e35a32208be9b5f22de181d4c17"
   },
   {
