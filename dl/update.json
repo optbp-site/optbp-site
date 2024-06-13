@@ -1,5 +1,12 @@
 [
   {
+    "version": "4.4.6",
+    "file": "OptimiseBP-4.4.6.exe",
+    "date": "2024-06-13",
+    "desc": "Minor release - Beta Test URL Update",
+    "MD5": "8585a79420274ea7f5068bea1c1234b3"
+  },
+  {
     "version": "4.4.5",
     "file": "OptimiseBP-4.4.5.exe",
     "date": "2024-06-13",
