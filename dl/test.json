@@ -1,5 +1,19 @@
 [
   {
+    "version": "4.4.6",
+    "file": "OptimiseBP-4.4.6.exe",
+    "date": "2024-06-13",
+    "desc": "Minor release - Beta Test Temp",
+    "MD5": "70f3767f4749404eef40bf59d28237da"
+  },
+  {
+    "version": "4.4.5",
+    "file": "OptimiseBP-4.4.5.exe",
+    "date": "2024-06-13",
+    "desc": "Minor release - Beta Testing",
+    "MD5": "f1c2dad3a1d734cdad327812b6d58890"
+  },
+  {
     "version": "4.4.4",
     "file": "OptimiseBP-4.4.4.exe",
     "date": "2024-06-05",
