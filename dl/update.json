@@ -1,5 +1,12 @@
 [
   {
+    "version": "4.4.5",
+    "file": "OptimiseBP-4.4.5.exe",
+    "date": "2024-06-14",
+    "desc": "Minor release - secure auto update",
+    "MD5": "b4ac1830d2e26f93b5f88373c30a5541"
+  },
+  {
     "version": "4.4.4",
     "file": "OptimiseBP-4.4.4.exe",
     "date": "2024-06-05",
