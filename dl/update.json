@@ -1,5 +1,12 @@
 [
   {
+    "version": "4.4.6",
+    "file": "OptimiseBP-4.4.6.exe",
+    "date": "2024-06-25",
+    "desc": "Minor release - Update TPP Key",
+    "MD5": "7bee67d3c0609fd30ceffa5d590fb992"
+  },
+  {
     "version": "4.4.5",
     "file": "OptimiseBP-4.4.5.exe",
     "date": "2024-06-14",
