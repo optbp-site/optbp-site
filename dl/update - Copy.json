@@ -1,0 +1,79 @@
+[
+  {
+    "version": "5.0.1",
+    "file": "OptimiseBP-5.0.1.exe",
+    "date": "2024-08-07",
+    "desc": "Major release - Semble Integration & Browser Extension",
+    "MD5": "7e2acf722da7563516d9df1bd28b1d2d"
+  },
+  {
+    "version": "4.4.6",
+    "file": "OptimiseBP-4.4.6.exe",
+    "date": "2024-06-25",
+    "desc": "Minor release - Update TPP Key",
+    "MD5": "7bee67d3c0609fd30ceffa5d590fb992"
+  },
+  {
+    "version": "4.4.5",
+    "file": "OptimiseBP-4.4.5.exe",
+    "date": "2024-06-14",
+    "desc": "Minor release - secure auto update",
+    "MD5": "b4ac1830d2e26f93b5f88373c30a5541"
+  },
+  {
+    "version": "4.4.4",
+    "file": "OptimiseBP-4.4.4.exe",
+    "date": "2024-06-05",
+    "desc": "Minor release - Skip Audit (Optional)",
+    "MD5": "eb359e35a32208be9b5f22de181d4c17"
+  },
+  {
+    "version": "4.4.3",
+    "file": "OptimiseBP-4.4.3.exe",
+    "date": "2024-06-04",
+    "desc": "Minor release - Autoupdater Test",
+    "MD5": "ba851ab3949723d1cc8efce2ebc81ed0"
+  },
+  {
+    "version": "4.4.2",
+    "file": "OptimiseBP-4.4.2.exe",
+    "date": "2024-06-04",
+    "desc": "Minor release - Autoupdater Test",
+    "MD5": "3792619d07138c30255e7a92768d900a"
+  },
+  {
+    "version": "4.4.0",
+    "file": "OptimiseBP-4.4.0.exe",
+    "date": "2024-06-03",
+    "desc": "Minor release - Autoupdater Test",
+    "MD5": "7278cc552bf0c6f52bbcfff9427a42ce"
+  },
+  {
+    "version": "4.3.4",
+    "file": "OptimiseBP-4.3.4.exe",
+    "date": "2024-04-29",
+    "desc": "Minor release - Enhancement",
+    "MD5": "32388fb665af81984a6c7cd6bc080d26"
+  },
+  {
+    "version": "4.3.3",
+    "file": "OptimiseBP-4.3.3.exe",
+    "date": "2024-03-25",
+    "desc": "Minor release - Enhancement",
+    "MD5": "867a26359531a33fe9f610ff2fe60207"
+  },
+  {
+    "version": "4.3.2",
+    "file": "OptimiseBP-4.3.2.exe",
+    "date": "2023-11-25",
+    "desc": "Minor release - Bug fix",
+    "MD5": "89ca9b29e77e1cdf70cb6d9802cf2f91"
+  },
+  {
+    "version": "4.3.1",
+    "file": "OptimiseBP-4.3.1.exe",
+    "date": "2023-11-21",
+    "desc": "Minor release - Feature",
+    "MD5": "ad111c59d56d4e85ee4cdffbbb13d7b1"
+  }
+]
