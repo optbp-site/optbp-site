@@ -135,185 +135,20 @@
                         <b>Version History</b>
                         <br />
 
-                        25th June 2024 - <a href="dl/OptimiseBP-4.4.6.exe"><b>v4.4.6</b></a>
-                        <li>Minor release
+                        17th August 2024 - <a href="dl/OptimiseBP-5.0.6.exe"><b>v5.0.6</b></a>
+                        <li>(beta) Major testing release.
                         <li>
-                            Enhancement:
-                            <br />- Update TPP Key.
-                            <br />v4.4.6
-                            <br />(md5 hash : 7bee67d3c0609fd30ceffa5d590fb992)
-                            <br /><br />
-
-                        14th June 2024 - <a href="dl/OptimiseBP-4.4.5.exe"><b>v4.4.5</b></a>
-                        <li>Minor release
+                            Semble Integration:
+                            <br />- integrate to Semble.
                         <li>
-                            Enhancement:
-                            <br />- secure auto update location.
-                            <br />v4.4.5
-                            <br />(md5 hash : b4ac1830d2e26f93b5f88373c30a5541)
-                            <br /><br />
-
-                            25th March 2024 - <a href="dl/OptimiseBP-4.3.3.exe"><b>v4.3.3</b></a>
-                        <li>Minor release
-                        <li>
-                            Enhancement:
-                            <br />- swap to Calling Name instead of FirstNames for EMIS Pt Matching.
-                            <br />- add machine name to Log & Audit files.
-                            <br />v4.3.3
-                            <br />(md5 hash : 867a26359531a33fe9f610ff2fe60207)
+                            Browser Extension:
+                            <br />- File summary directly from the Browser.
+                            <br />v5.0.6
+                            <br />(md5 hash : 693392327689de50f0e92953e5583619)
                             <br /><br />
 
 
-                            21st November 2023 - <a href="dl/OptimiseBP-4.3.1.exe"><b>v4.3.1</b></a>
-                        <li>Minor release
-                        <li>
-                            Features:
-                            <br />- update OptBP DB on every Clin Sys Update to allow removal of "Above Target BPs" from the list.
-                            <br />- removed notification count feature that was causing an intermittent error.
-                            <br />v4.3.1
-                            <br />(md5 hash : ad111c59d56d4e85ee4cdffbbb13d7b1)
-                            <br /><br />
-
-                            26th August 2023 - <a href="dl/OptimiseBP-4.2.0.exe"><b>v4.2.0</b></a>
-                        <li>Minor release
-                        <li>
-                            Features:
-                            <br />- self sign-up URL to clipboard.
-                            <br />- unread notifications indicator.
-                            <br />v4.2.0
-                            <br />(md5 hash : 24ddab18f9f92f935dc46a0dbdb3da6c)
-                            <br /><br />
-
-                            22nd May 2023 - <a href="dl/OptimiseBP-4.1.5.exe"><b>v4.1.5</b></a>
-                        <li>Minor release
-                        <li>
-                            Fixes:
-                            <br />- Improved EMIS detection.
-                            <br />v4.1.5
-                            <br />(md5 hash : 6f8e342fedfc0327eb8a923ffac22878)
-                            <br /><br />
-
-                            14th May 2023 - <a href="dl/OptimiseBP-4.1.4.exe"><b>v4.1.4</b></a>
-                        <li>Minor release
-                        <li>
-                            Fixes:
-                            <br />- Hide Clinician Settings unless EMIS.
-                            <br />- Alert if settings EMIS, but EMIS not installed.
-                            <br />- Crash gracefully with Error Log if setting is EMIS and EMIS is installed, but there's a problem with the COM Object.
-                            <br />- Remove .NET check if Silent Installer.
-                            <br />- Default to Clin Sys Test on Silent Install.
-                            <br />v4.1.4
-                            <br />(md5 hash : 60444dc7220bf448dc0c4d619e9dcadd)
-                            <br /><br />
-
-                            7th May 2023 - <a href="dl/Optimise BP - 4.1.3.exe"><b>v4.1.3</b></a>
-                        <li>Installer changes
-                        <li>
-                            Fixes:
-                            <br />- silent install
-                            <br />v4.1.3
-                            <br />(md5 hash : a080dfa1f9a85f7acabd1352419bf813)
-                            <br /><br />
-
-                            2nd May 2023 - <a href="dl/Optimise BP - 4.1.2.exe"><b>v4.1.2</b></a>
-                        <li>Minor release
-                        <li>
-                            Fixes:
-                            <br />- fatal exceptions when clicking buttons while previous actions are still in progress (disabled buttons)
-                            <br />- failure when EMIS record has no NHS Number recorded (skip match)
-                            <br />v4.1.2
-                            <br />(md5 hash : 69d79092f25c722c0665bcc43fd85c26)
-                            <br /><br />
-                            30th Apr 2023 - <a href="dl/Optimise BP - 4.1.1.exe"><b>v4.1.1</b></a>
-                        <li>Minor release
-                        <li>
-                            Implements:
-                            <br />- BatchWait
-                        <li>
-                            Fixes:
-                            <br />- Check OIDC instead of Refresh everytime
-                            <br />- ListView size
-                            <br />
-                            <br />v4.1.1
-                            <br />(md5 hash : b4dbf722f8e5c39194392bae2ea2f6d9)
-                            <br /><br />
-                            11th Mar 2023 - <a href="dl/Optimise BP - 4.0.4.exe"><b>v4.0.4</b></a>
-                        <li>Minor release
-                        <li>Fix for location of XML on secure Win10 PC
-                        <li>Additional ClinSysDebug flag for capturing a copy of XML in case of EMIS Problems.
-                        <li>Average BP not available as Rx changed.
-                        <li>Added error catch for fatal error when server is down (eg local dev machine not running).
-                        <li>
-                            Additional ClinDebug flag for capturing a copy of XML in case of TPP Problems.
-                            <br />v4.0.4
-                            <br />(md5 hash : cbec7bf2895f1dffc943de5d40cfd3aa)
-                            <br /><br />
-                            12th Jan 2023 - <a href="dl/Optimise BP - 4.0.1.exe"><b>v4.0.1</b></a>
-                        <li>Minor release
-                        <li>Check system locale is en-GB for date formats
-                        <li>
-                            Only allow one instance of the Desktop App to run
-                            <br />v4.0.1
-                            <br />(md5 hash : 2c1420c0af4417662cce18ccaf763eb8)
-                            <br /><br />
-                            8th Jan 2023 - <a href="dl/Optimise BP - 4.0.0.exe"><b>v4.0.0</b></a>
-                        <li>Major release Self Signup
-                        <li>Match Pts adding their NHS Numbers and Clin IDs
-                        <li>Upload data for cohorts of Pts with well controlled BP
-                        <li>
-                            List all Pts with poorly controlled BP
-                            <br />v4.0.0
-                            <br />(md5 hash : 5e303e8b861e20c57787dfa8cf4578ff)
-                            <br /><br />
-                            25th Nov 2022 - <a href="dl/Optimise BP - 3.1.8.exe"><b>v3.1.8</b></a>
-                        <li>Failure to Write into EMIS on "Locked Down" machine - attempt XML Streamreader as Read Only
-                        <li>Text change - BP not yet recorded "by Pt", target 135/85
-                        <li>Text change - (authcode copied to clipboard)
-                        <li>Data filing states Titrating when Non-Titrating Rx - change to only add Rx Text if on a Titrating Rx in OptBP Core!!
-                        <li>Click through AddRx not working on LocallHost - change to UseShellExecute = true,
-                        <li>AddRx now closes the Add New Pt window so its not in the way.
-                        <li>
-                            Fixed Gender not saved on TPP Desktop App NewPt
-                            <br />v3.1.8
-                            <br />(md5 hash : abc8e789d0dcd71fab5005d9102ebc09)
-                            <br /><br />
-                            20th Nov 2022 - <a href="dl/Optimise BP - 3.1.7a.exe"><b>v3.1.7a</b></a>
-                        <li>
-                            Installer gives EMIS or TPP option to default appsettings.json.
-                            <br />v3.1.7
-                            <br />(md5 hash : 4c2095fb57c3d3f3b6131aed8f0dd761)
-                            <br /><br />
-                            19th Nov 2022 - <a href="dl/Optimise BP - 3.1.7.exe"><b>v3.1.7</b></a>
-                        <li>Launch Clin Dashboard directly to the correct Pt.
-                        <li>Improved settings and first run.
-                        <li>Check .NET and offer install instructions.
-                        <li>First working TPP release.
-                        <li>
-                            Better error logging.
-                            <br />v3.1.7
-                            <br />(md5 hash : e768d33cd378d19a6ebe2d68e00c1f26)
-                            <br /><br />
-                            12th Nov 2022 - <a href="dl/Optimise BP - 3.1.6.exe"><b>v3.1.6</b></a>
-                        <li>Improved speed of API calls
-                        <li>EMIS Activation sceen in foreground
-                        <li>
-                            Launch Clinician Dashboard as currently authenticated user
-                            <br />(md5 hash : 5fc7c87bc89047b580c89d47fde20abf)
-                            <br /><br />
-                            8th Nov 2022 - <a href="dl/Optimise BP - 3.1.5.exe"><b>v3.1.5</b></a>
-                        <li>Upgraded from .NET 3.1 to .NET 6
-                        <li>Hide Tray Icon on close
-                        <li>
-                            Show Splash Loader for time consuming events
-                            <br />(md5 hash : e8d035cf1d1d2dd7a45d478d44adb2db)
-                            <br /><br />
-                            <br />
-                            Please note our OptBP Desktop App requires the 32 bit version of the .NET 6 Desktop Runtime:
-                            <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.10-windows-x86-installer">download</a>
-                            <br /><br />
-                            For EMIS Practices, if this is the first integrated App being installed, you may be prompted to <br />
-                            download the .NET 3.5 Runtime to allow the EMIS API to function properly.
-</div> <!-- about content -->
+		</div> <!-- about content -->
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
