@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LocalStorage JSON CRUD</title>
+  <title>Entry Manager</title>
+  <style>
+    .active-entry {
+      font-weight: bold;
+      color: green;
+    }
+    .badge {
+      background: green;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
   <h2>Add / Edit Entry</h2>
   <input type="hidden" id="editIndex" />
-  UI: <input type="text" id="ui" pattern="[a-zA-Z0-9]+" required /><br />
-API: <input type="text" id="api" pattern="[a-zA-Z0-9]+" required /><br />
-Auth: <input type="text" id="auth" pattern="[a-zA-Z0-9]+" required /><br />
-Active: <input type="checkbox" id="active" /><br />
-
-  
-  <button onclick="saveEntry()">Save</button>
+  UI: <input type="text" id="ui" required /><br />
+  API: <input type="text" id="api" required /><br />
+  Auth: <input type="text" id="auth" required /><br />
+  Active: <input type="checkbox" id="active" /><br />
+  <button id="saveBtn" onclick="saveEntry()" disabled>Save</button>
+  <button onclick="cancelEdit()">Cancel</button>
   <hr />
   <h2>Entries</h2>
   <ul id="entryList"></ul>
@@ -21,74 +33,113 @@ Active: <input type="checkbox" id="active" /><br />
   <script>
     const STORAGE_KEY = 'entries';
 
-    
-function saveEntry() {
-  const ui = document.getElementById('ui').value.trim();
-  const api = document.getElementById('api').value.trim();
-  const auth = document.getElementById('auth').value.trim();
-  const active = document.getElementById('active').checked;
+    function loadEntries() {
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const list = document.getElementById('entryList');
+      list.innerHTML = '';
+      entries.forEach((entry, index) => {
+        const item = document.createElement('li');
+        const isActive = entry.active;
+        item.className = isActive ? 'active-entry' : '';
+        item.innerHTML = `
+          ${entry.ui}, ${entry.api}, ${entry.auth}
+          ${isActive ? '<span class="badge">ACTIVE</span>' : ''}
+          <button onclick="editEntry(${index})">Edit</button>
+          <button onclick="deleteEntry(${index})">Delete</button>
+        `;
+        list.appendChild(item);
+      });
+    }
 
-const urlSafeRegex = /^[a-zA-Z0-9:/?&=._-]+$/;
-if (!urlSafeRegex.test(ui) || !urlSafeRegex.test(api) || !urlSafeRegex.test(auth)) {
-  return alert("Fields must be URL-safe: a-z, 0-9, :, /, ?, &, =, ., _, -");
-}
+    function saveEntry() {
+      const ui = document.getElementById('ui').value.trim();
+      const api = document.getElementById('api').value.trim();
+      const auth = document.getElementById('auth').value.trim();
+      const active = document.getElementById('active').checked;
+      const editIndex = document.getElementById('editIndex').value;
+      const urlSafeRegex = /^[a-zA-Z0-9:/?&=._-]+$/;
 
+      if (!urlSafeRegex.test(ui) || !urlSafeRegex.test(api) || !urlSafeRegex.test(auth)) {
+        return alert("Fields must be URL-safe: a-z, 0-9, :, /, ?, &, =, ., _, -");
+      }
 
-  const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-  const editIndex = document.getElementById('editIndex').value;
-  const entry = { ui, api, auth, active };
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
 
-  if (active) {
-    entries.forEach(e => e.active = false); // Only one active allowed
-  }
+      if (active) {
+        entries.forEach(e => e.active = false); // enforce single active
+      }
 
-  if (editIndex === '') {
-    entries.push(entry);
-  } else {
-    entries[parseInt(editIndex)] = entry;
-    document.getElementById('editIndex').value = '';
-  }
+      const entry = { ui, api, auth, active };
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
-  document.getElementById('ui').value = '';
-  document.getElementById('api').value = '';
-  document.getElementById('auth').value = '';
-  document.getElementById('active').checked = false;
-  loadEntries();
-}
+      if (editIndex === '') {
+        entries.push(entry);
+      } else {
+        entries[parseInt(editIndex)] = entry;
+      }
 
-function loadEntries() {
-  const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-  const list = document.getElementById('entryList');
-  list.innerHTML = '';
-  entries.forEach((entry, index) => {
-    const item = document.createElement('li');
-    item.innerHTML = `
-      ${entry.ui}, ${entry.api}, ${entry.auth}, Active: ${entry.active}
-      <button onclick="editEntry(${index})">Edit</button>
-      <button onclick="deleteEntry(${index})">Delete</button>
-    `;
-    list.appendChild(item);
-  });
-}
-    
-    
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+      resetForm();
+      loadEntries();
+    }
 
     function editEntry(index) {
       const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
       const entry = entries[index];
-      document.getElementById('name').value = entry.name;
-      document.getElementById('age').value = entry.age;
-      document.getElementById('email').value = entry.email;
+      document.getElementById('ui').value = entry.ui;
+      document.getElementById('api').value = entry.api;
+      document.getElementById('auth').value = entry.auth;
+      document.getElementById('active').checked = entry.active;
       document.getElementById('editIndex').value = index;
+      checkForChanges();
     }
 
     function deleteEntry(index) {
+      if (!confirm("Are you sure you want to delete this entry?")) return;
       const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
       entries.splice(index, 1);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+      resetForm();
       loadEntries();
     }
+
+    function cancelEdit() {
+      resetForm();
+    }
+
+    function resetForm() {
+      document.getElementById('editIndex').value = '';
+      document.getElementById('ui').value = '';
+      document.getElementById('api').value = '';
+      document.getElementById('auth').value = '';
+      document.getElementById('active').checked = false;
+      document.getElementById('saveBtn').disabled = true;
+    }
+
+    function checkForChanges() {
+      const ui = document.getElementById('ui').value.trim();
+      const api = document.getElementById('api').value.trim();
+      const auth = document.getElementById('auth').value.trim();
+      const active = document.getElementById('active').checked;
+      const editIndex = document.getElementById('editIndex').value;
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+      let changed = !!ui && !!api && !!auth;
+      if (editIndex !== '') {
+        const existing = entries[parseInt(editIndex)];
+        changed = changed && (
+          ui !== existing.ui ||
+          api !== existing.api ||
+          auth !== existing.auth ||
+          active !== existing.active
+        );
+      }
+
+      document.getElementById('saveBtn').disabled = !changed;
+    }
+
+    document.querySelectorAll('#ui, #api, #auth, #active').forEach(el => {
+      el.addEventListener('input', checkForChanges);
+    });
 
     loadEntries();
   </script>
