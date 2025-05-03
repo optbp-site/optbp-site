@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LocalStorage JSON CRUD</title>
+</head>
+<body>
+  <h2>Add / Edit Entry</h2>
+  <input type="hidden" id="editIndex" />
+  Name: <input type="text" id="name" /><br />
+  Age: <input type="number" id="age" /><br />
+  Email: <input type="email" id="email" /><br />
+  <button onclick="saveEntry()">Save</button>
+  <hr />
+  <h2>Entries</h2>
+  <ul id="entryList"></ul>
+
+  <script>
+    const STORAGE_KEY = 'entries';
+
+    function loadEntries() {
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const list = document.getElementById('entryList');
+      list.innerHTML = '';
+      entries.forEach((entry, index) => {
+        const item = document.createElement('li');
+        item.innerHTML = `
+          ${entry.name}, ${entry.age}, ${entry.email}
+          <button onclick="editEntry(${index})">Edit</button>
+          <button onclick="deleteEntry(${index})">Delete</button>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    function saveEntry() {
+      const name = document.getElementById('name').value.trim();
+      const age = document.getElementById('age').value;
+      const email = document.getElementById('email').value.trim();
+      if (!name || !age || !email) return alert("All fields are required");
+
+      const entry = { name, age, email };
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const editIndex = document.getElementById('editIndex').value;
+
+      if (editIndex === '') {
+        entries.push(entry);
+      } else {
+        entries[parseInt(editIndex)] = entry;
+        document.getElementById('editIndex').value = '';
+      }
+
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+      document.getElementById('name').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('email').value = '';
+      loadEntries();
+    }
+
+    function editEntry(index) {
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const entry = entries[index];
+      document.getElementById('name').value = entry.name;
+      document.getElementById('age').value = entry.age;
+      document.getElementById('email').value = entry.email;
+      document.getElementById('editIndex').value = index;
+    }
+
+    function deleteEntry(index) {
+      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      entries.splice(index, 1);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+      loadEntries();
+    }
+
+    loadEntries();
+  </script>
+</body>
+</html>
