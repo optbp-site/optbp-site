@@ -7,9 +7,11 @@
 <body>
   <h2>Add / Edit Entry</h2>
   <input type="hidden" id="editIndex" />
-  Name: <input type="text" id="name" /><br />
-  Age: <input type="number" id="age" /><br />
-  Email: <input type="email" id="email" /><br />
+  UI: <input type="text" id="ui" pattern="[a-zA-Z0-9]+" required /><br />
+API: <input type="text" id="api" pattern="[a-zA-Z0-9]+" required /><br />
+Auth: <input type="text" id="auth" pattern="[a-zA-Z0-9]+" required /><br />
+Active: <input type="checkbox" id="active" /><br />
+  
   <button onclick="saveEntry()">Save</button>
   <hr />
   <h2>Entries</h2>
@@ -18,44 +20,56 @@
   <script>
     const STORAGE_KEY = 'entries';
 
-    function loadEntries() {
-      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      const list = document.getElementById('entryList');
-      list.innerHTML = '';
-      entries.forEach((entry, index) => {
-        const item = document.createElement('li');
-        item.innerHTML = `
-          ${entry.name}, ${entry.age}, ${entry.email}
-          <button onclick="editEntry(${index})">Edit</button>
-          <button onclick="deleteEntry(${index})">Delete</button>
-        `;
-        list.appendChild(item);
-      });
-    }
+    
+function saveEntry() {
+  const ui = document.getElementById('ui').value.trim();
+  const api = document.getElementById('api').value.trim();
+  const auth = document.getElementById('auth').value.trim();
+  const active = document.getElementById('active').checked;
 
-    function saveEntry() {
-      const name = document.getElementById('name').value.trim();
-      const age = document.getElementById('age').value;
-      const email = document.getElementById('email').value.trim();
-      if (!name || !age || !email) return alert("All fields are required");
+  if (!/^[a-z0-9]+$/i.test(ui) || !/^[a-z0-9]+$/i.test(api) || !/^[a-z0-9]+$/i.test(auth)) {
+    return alert("Fields must be alphanumeric");
+  }
 
-      const entry = { name, age, email };
-      const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      const editIndex = document.getElementById('editIndex').value;
+  const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+  const editIndex = document.getElementById('editIndex').value;
+  const entry = { ui, api, auth, active };
 
-      if (editIndex === '') {
-        entries.push(entry);
-      } else {
-        entries[parseInt(editIndex)] = entry;
-        document.getElementById('editIndex').value = '';
-      }
+  if (active) {
+    entries.forEach(e => e.active = false); // Only one active allowed
+  }
 
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
-      document.getElementById('name').value = '';
-      document.getElementById('age').value = '';
-      document.getElementById('email').value = '';
-      loadEntries();
-    }
+  if (editIndex === '') {
+    entries.push(entry);
+  } else {
+    entries[parseInt(editIndex)] = entry;
+    document.getElementById('editIndex').value = '';
+  }
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  document.getElementById('ui').value = '';
+  document.getElementById('api').value = '';
+  document.getElementById('auth').value = '';
+  document.getElementById('active').checked = false;
+  loadEntries();
+}
+
+function loadEntries() {
+  const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+  const list = document.getElementById('entryList');
+  list.innerHTML = '';
+  entries.forEach((entry, index) => {
+    const item = document.createElement('li');
+    item.innerHTML = `
+      ${entry.ui}, ${entry.api}, ${entry.auth}, Active: ${entry.active}
+      <button onclick="editEntry(${index})">Edit</button>
+      <button onclick="deleteEntry(${index})">Delete</button>
+    `;
+    list.appendChild(item);
+  });
+}
+    
+    
 
     function editEntry(index) {
       const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
