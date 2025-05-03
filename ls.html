@@ -27,9 +27,11 @@ function saveEntry() {
   const auth = document.getElementById('auth').value.trim();
   const active = document.getElementById('active').checked;
 
-  if (!/^[a-z0-9]+$/i.test(ui) || !/^[a-z0-9]+$/i.test(api) || !/^[a-z0-9]+$/i.test(auth)) {
-    return alert("Fields must be alphanumeric");
-  }
+const urlSafeRegex = /^[a-zA-Z0-9:/?&=._-]+$/;
+if (!urlSafeRegex.test(ui) || !urlSafeRegex.test(api) || !urlSafeRegex.test(auth)) {
+  return alert("Fields must be URL-safe: a-z, 0-9, :, /, ?, &, =, ., _, -");
+}
+
 
   const entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
   const editIndex = document.getElementById('editIndex').value;
