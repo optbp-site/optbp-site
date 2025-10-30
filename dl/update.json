@@ -1,5 +1,12 @@
 [
   {
+    "version": "5.4.0",
+    "file": "OptimiseBP-5.4.0.exe",
+    "date": "2025-10-29",
+    "desc": "Better matching & encrypted logging.",
+    "MD5": "7f85b4b4fe2239b74f0fa629f958052e"
+  },
+  {
     "version": "4.4.6",
     "file": "OptimiseBP-4.4.6.exe",
     "date": "2024-06-25",
