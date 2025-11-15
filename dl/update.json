@@ -1,5 +1,12 @@
 [
   {
+    "version": "6.1.0",
+    "file": "OptimiseBP-6.1.0.exe",
+    "date": "2025-11-15",
+    "desc": "Telemetry.",
+    "MD5": "eb579ae6d629346fa204af4d87f7438d"
+  },
+  {
     "version": "6.0.0",
     "file": "OptimiseBP-6.0.0.exe",
     "date": "2025-11-03",
