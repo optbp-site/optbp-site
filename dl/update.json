@@ -1,5 +1,12 @@
 [
   {
+    "version": "7.1.0",
+    "file": "OptimiseBP-7.1.0.exe",
+    "date": "2026-03-18",
+    "desc": "Default Target BP.",
+    "MD5": "09c95b7e2fe8f54198c165fa4701190d"
+  },
+  {
     "version": "6.2.2",
     "file": "OptimiseBP-6.2.2.exe",
     "date": "2025-12-05",
