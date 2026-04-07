@@ -1,0 +1,16 @@
+[
+  {
+    "version": "8.1.0",
+    "file": "OptimiseBP-8.1.0.exe",
+    "date": "2026-04-07",
+    "desc": "Major Update - .NET 10",
+    "sha": "07302359340fe596e99bb554d2baf221ce3f8d310c61916c3b711a14e5999aaf"
+  },
+  {
+    "version": "8.1.1",
+    "file": "OptimiseBP-8.1.1.exe",
+    "date": "2026-04-07",
+    "desc": "Minor Update - Updater Test",
+    "sha": "8458c0d988ed941967c4d9822f82b552180762d2a19c27ec97522c8c6b3b7493"
+  }
+]
