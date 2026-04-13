@@ -13,4 +13,11 @@
     "desc": "Minor Update - Updater Test",
     "sha": "8458c0d988ed941967c4d9822f82b552180762d2a19c27ec97522c8c6b3b7493"
   }
+  {
+    "version": "8.2.1",
+    "file": "OptimiseBP-8.2.1.exe",
+    "date": "2026-04-13",
+    "desc": "Minor Update - Swap Practice Improvements",
+    "sha": "9fb88b50c2c78b56fbdab6582eb699074ecb8e5386070ebf825c97f9b72ca1ac"
+  }
 ]
