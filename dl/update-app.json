@@ -1,5 +1,12 @@
 [
   {
+    "version": "8.3.0",
+    "file": "OptimiseBP-8.3.0.exe",
+    "date": "2026-05-01",
+    "desc": "Minor Update - TPP Activation & MachineGUID improvements.",
+    "sha": "c5d7fb3d60056251d14a03e9eeeed8889298daaee26e4bdfda6a0175a0965f9e"
+  },
+  {
     "version": "8.1.0",
     "file": "OptimiseBP-8.1.0.exe",
     "date": "2026-04-07",
