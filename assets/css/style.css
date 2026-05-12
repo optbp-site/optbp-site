@@ -1347,6 +1347,14 @@ ol.c {list-style-type: upper-roman;}
 ol.d {list-style-type: lower-alpha;}
 
 
+.team-photo {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
 /*===========================
        FB.ANIMATE  css 
 ===========================*/
