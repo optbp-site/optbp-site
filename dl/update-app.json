@@ -1,5 +1,12 @@
 [
   {
+    "version": "8.4.1",
+    "file": "OptimiseBP-8.4.1.exe",
+    "date": "2026-05-28",
+    "desc": "Minor Update - Rx from Clin Sys.",
+    "sha": "cee6c9213dfbcc38580e1f9f7f79682f90b0157bada127d4cde3c51c872dd0eb"
+  },
+  {
     "version": "8.3.0",
     "file": "OptimiseBP-8.3.0.exe",
     "date": "2026-05-01",
