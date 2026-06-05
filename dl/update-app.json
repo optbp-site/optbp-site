@@ -1,5 +1,12 @@
 [
   {
+    "version": "8.5.0",
+    "file": "OptimiseBP-8.4.1.exe",
+    "date": "2026-06-04",
+    "desc": "Minor Update - TPP Close Record on Match.",
+    "sha": "050599400a29ff9bc36c3bf398cd909f1b2b52c0493d74bc987450a2d36d5a7f"
+  },
+  {
     "version": "8.4.1",
     "file": "OptimiseBP-8.4.1.exe",
     "date": "2026-05-28",
