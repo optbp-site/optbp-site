@@ -1,5 +1,12 @@
 [
   {
+    "version": "9.1.5",
+    "file": "OptimiseBP-9.1.5.exe",
+    "date": "2026-07-24",
+    "desc": "Major release - Clinical Filing.",
+    "sha": "386c153951b53749ff05835338f1b4443c57a27691b60c5d6b7c7518aa632af1"
+  },
+  {
     "version": "8.5.0",
     "file": "OptimiseBP-8.5.0.exe",
     "date": "2026-06-04",
