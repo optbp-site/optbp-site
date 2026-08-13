@@ -1,5 +1,12 @@
 [
   {
+    "version": "9.4.1",
+    "file": "OptimiseBP-9.4.1.exe",
+    "date": "2026-08-14",
+    "desc": "Minor release - Matching retry for TPP.",
+    "sha": "6dc56af99a29d879560c288a1cde320df77c414dc504bc82eba5449e6385353c"
+  },
+  {
     "version": "9.3.1",
     "file": "OptimiseBP-9.3.1.exe",
     "date": "2026-08-09",
