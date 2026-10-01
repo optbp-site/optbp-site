@@ -1,5 +1,12 @@
 [
   {
+    "version": "9.5.4",
+    "file": "OptimiseBP-9.5.4.exe",
+    "date": "2026-10-01",
+    "desc": "Minor release - Log Uploads.",
+    "sha": "1ce4173a769b6c05c13336632f7789fa3323672426c3e2714dc75eddf10e1ff0"
+  },
+  {
     "version": "9.5.3",
     "file": "OptimiseBP-9.5.3.exe",
     "date": "2026-09-30",
