@@ -1,5 +1,12 @@
 [
   {
+    "version": "10.2.1",
+    "file": "OptimiseBP-10.2.1.exe",
+    "date": "2026-10-28",
+    "desc": "Major release - Lifestyle Filing.",
+    "sha": "62726e9e0dae984bbfa988ada0d11eb8dd39de1eab9eaf7f468fd3b4c24b0fe6"
+  },
+  {
     "version": "9.5.4",
     "file": "OptimiseBP-9.5.4.exe",
     "date": "2026-10-01",
