@@ -1,98 +1,93 @@
 [
-    {
-        "version":  "10.3.1",
-        "file":  "OptimiseBP-10.3.1.exe",
-        "date":  "2026-11-12",
-        "desc":  "OptimiseBP Desktop v10.3.1",
-        "sha":  "a3cde1dc0254d2838ab468ffb9cee665015d0ab788266fc2ac2d6093e62ee042"
-    },
-    {
-        "value":  [
-                      {
-                          "version":  "10.2.1",
-                          "file":  "OptimiseBP-10.2.1.exe",
-                          "date":  "2026-10-28",
-                          "desc":  "Major release - Lifestyle Filing.",
-                          "sha":  "62726e9e0dae984bbfa988ada0d11eb8dd39de1eab9eaf7f468fd3b4c24b0fe6"
-                      },
-                      {
-                          "version":  "9.5.4",
-                          "file":  "OptimiseBP-9.5.4.exe",
-                          "date":  "2026-10-01",
-                          "desc":  "Minor release - Log Uploads.",
-                          "sha":  "1ce4173a769b6c05c13336632f7789fa3323672426c3e2714dc75eddf10e1ff0"
-                      },
-                      {
-                          "version":  "9.5.3",
-                          "file":  "OptimiseBP-9.5.3.exe",
-                          "date":  "2026-09-30",
-                          "desc":  "Minor release - Display needs filing improvements.",
-                          "sha":  "97deab6d31bb9c975f1588ace9bb285a76bab0e01496592e53cba71f3d5f8fd9"
-                      },
-                      {
-                          "version":  "9.4.1",
-                          "file":  "OptimiseBP-9.4.1.exe",
-                          "date":  "2026-08-14",
-                          "desc":  "Minor release - Matching retry for TPP.",
-                          "sha":  "6dc56af99a29d879560c288a1cde320df77c414dc504bc82eba5449e6385353c"
-                      },
-                      {
-                          "version":  "9.3.1",
-                          "file":  "OptimiseBP-9.3.1.exe",
-                          "date":  "2026-08-09",
-                          "desc":  "Minor release - Clin entered BP \u0026 New Rx required.",
-                          "sha":  "81efcf56d55f2afd72efd47329d05f56e1f6e3b12c63bd4ea819c105168927c3"
-                      },
-                      {
-                          "version":  "9.1.5",
-                          "file":  "OptimiseBP-9.1.5.exe",
-                          "date":  "2026-07-24",
-                          "desc":  "Major release - Clinical Filing.",
-                          "sha":  "386c153951b53749ff05835338f1b4443c57a27691b60c5d6b7c7518aa632af1"
-                      },
-                      {
-                          "version":  "8.5.0",
-                          "file":  "OptimiseBP-8.5.0.exe",
-                          "date":  "2026-06-04",
-                          "desc":  "Minor Update - TPP Close Record on Match.",
-                          "sha":  "050599400a29ff9bc36c3bf398cd909f1b2b52c0493d74bc987450a2d36d5a7f"
-                      },
-                      {
-                          "version":  "8.4.1",
-                          "file":  "OptimiseBP-8.4.1.exe",
-                          "date":  "2026-05-28",
-                          "desc":  "Minor Update - Rx from Clin Sys.",
-                          "sha":  "cee6c9213dfbcc38580e1f9f7f79682f90b0157bada127d4cde3c51c872dd0eb"
-                      },
-                      {
-                          "version":  "8.3.0",
-                          "file":  "OptimiseBP-8.3.0.exe",
-                          "date":  "2026-05-01",
-                          "desc":  "Minor Update - TPP Activation \u0026 MachineGUID improvements.",
-                          "sha":  "c5d7fb3d60056251d14a03e9eeeed8889298daaee26e4bdfda6a0175a0965f9e"
-                      },
-                      {
-                          "version":  "8.1.0",
-                          "file":  "OptimiseBP-8.1.0.exe",
-                          "date":  "2026-04-07",
-                          "desc":  "Major Update - .NET 10",
-                          "sha":  "07302359340fe596e99bb554d2baf221ce3f8d310c61916c3b711a14e5999aaf"
-                      },
-                      {
-                          "version":  "8.1.1",
-                          "file":  "OptimiseBP-8.1.1.exe",
-                          "date":  "2026-04-07",
-                          "desc":  "Minor Update - Updater Test",
-                          "sha":  "8458c0d988ed941967c4d9822f82b552180762d2a19c27ec97522c8c6b3b7493"
-                      },
-                      {
-                          "version":  "8.2.1",
-                          "file":  "OptimiseBP-8.2.1.exe",
-                          "date":  "2026-04-13",
-                          "desc":  "Minor Update - Swap Practice Improvements",
-                          "sha":  "9fb88b50c2c78b56fbdab6582eb699074ecb8e5386070ebf825c97f9b72ca1ac"
-                      }
-                  ],
-        "Count":  12
-    }
-]
+        {
+          "version": "10.3.1",
+          "file": "OptimiseBP-10.3.1.exe",
+          "date": "2026-11-12",
+          "desc": "OptimiseBP Desktop v10.3.1",
+          "sha": "a3cde1dc0254d2838ab468ffb9cee665015d0ab788266fc2ac2d6093e62ee042"
+        },
+        {
+          "version": "10.2.1",
+          "file": "OptimiseBP-10.2.1.exe",
+          "date": "2026-10-28",
+          "desc": "Major release - Lifestyle Filing.",
+          "sha": "62726e9e0dae984bbfa988ada0d11eb8dd39de1eab9eaf7f468fd3b4c24b0fe6"
+        },
+        {
+          "version": "9.5.4",
+          "file": "OptimiseBP-9.5.4.exe",
+          "date": "2026-10-01",
+          "desc": "Minor release - Log Uploads.",
+          "sha": "1ce4173a769b6c05c13336632f7789fa3323672426c3e2714dc75eddf10e1ff0"
+        },
+        {
+          "version": "9.5.3",
+          "file": "OptimiseBP-9.5.3.exe",
+          "date": "2026-09-30",
+          "desc": "Minor release - Display needs filing improvements.",
+          "sha": "97deab6d31bb9c975f1588ace9bb285a76bab0e01496592e53cba71f3d5f8fd9"
+        },
+        {
+          "version": "9.4.1",
+          "file": "OptimiseBP-9.4.1.exe",
+          "date": "2026-08-14",
+          "desc": "Minor release - Matching retry for TPP.",
+          "sha": "6dc56af99a29d879560c288a1cde320df77c414dc504bc82eba5449e6385353c"
+        },
+        {
+          "version": "9.3.1",
+          "file": "OptimiseBP-9.3.1.exe",
+          "date": "2026-08-09",
+          "desc": "Minor release - Clin entered BP \u0026 New Rx required.",
+          "sha": "81efcf56d55f2afd72efd47329d05f56e1f6e3b12c63bd4ea819c105168927c3"
+        },
+        {
+          "version": "9.1.5",
+          "file": "OptimiseBP-9.1.5.exe",
+          "date": "2026-07-24",
+          "desc": "Major release - Clinical Filing.",
+          "sha": "386c153951b53749ff05835338f1b4443c57a27691b60c5d6b7c7518aa632af1"
+        },
+        {
+          "version": "8.5.0",
+          "file": "OptimiseBP-8.5.0.exe",
+          "date": "2026-06-04",
+          "desc": "Minor Update - TPP Close Record on Match.",
+          "sha": "050599400a29ff9bc36c3bf398cd909f1b2b52c0493d74bc987450a2d36d5a7f"
+        },
+        {
+          "version": "8.4.1",
+          "file": "OptimiseBP-8.4.1.exe",
+          "date": "2026-05-28",
+          "desc": "Minor Update - Rx from Clin Sys.",
+          "sha": "cee6c9213dfbcc38580e1f9f7f79682f90b0157bada127d4cde3c51c872dd0eb"
+        },
+        {
+          "version": "8.3.0",
+          "file": "OptimiseBP-8.3.0.exe",
+          "date": "2026-05-01",
+          "desc": "Minor Update - TPP Activation \u0026 MachineGUID improvements.",
+          "sha": "c5d7fb3d60056251d14a03e9eeeed8889298daaee26e4bdfda6a0175a0965f9e"
+        },
+        {
+          "version": "8.1.0",
+          "file": "OptimiseBP-8.1.0.exe",
+          "date": "2026-04-07",
+          "desc": "Major Update - .NET 10",
+          "sha": "07302359340fe596e99bb554d2baf221ce3f8d310c61916c3b711a14e5999aaf"
+        },
+        {
+          "version": "8.1.1",
+          "file": "OptimiseBP-8.1.1.exe",
+          "date": "2026-04-07",
+          "desc": "Minor Update - Updater Test",
+          "sha": "8458c0d988ed941967c4d9822f82b552180762d2a19c27ec97522c8c6b3b7493"
+        },
+        {
+          "version": "8.2.1",
+          "file": "OptimiseBP-8.2.1.exe",
+          "date": "2026-04-13",
+          "desc": "Minor Update - Swap Practice Improvements",
+          "sha": "9fb88b50c2c78b56fbdab6582eb699074ecb8e5386070ebf825c97f9b72ca1ac"
+        }
+      ]
